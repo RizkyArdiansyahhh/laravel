@@ -8,9 +8,11 @@
     <title>Halaman Home</title>
 </head>
 <body>
-    <div>
-        <a href="/">Home</a>
+    <div  class="nav">
+        <a href="/" class = "active">Home</a>
         <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
     </div>
     <h1>Halaman Home</h1>
     <img src="img/Go_Youn-jung.png" alt="profile go youn jung">
