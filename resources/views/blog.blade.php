@@ -15,7 +15,7 @@
                 {{ Str::limit($post['body'], 150) }}
             </p>
             <div class="flex gap-0.5 group mb-3">
-                <a class="text-sm font-medium text-teal-500 " href="#">Read More</a>
+                <a class="text-sm font-medium text-teal-500 " href="/blog/{{ $post['slug'] }}">Read More</a>
                 <p class="text-sm font-medium text-teal-500 group-hover:ml-4 transition-all duration-200 ease-in-out">
                     &raquo;</p>
             </div>
