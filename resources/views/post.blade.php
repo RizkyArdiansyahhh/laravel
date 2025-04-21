@@ -9,7 +9,7 @@
                 {{ $post->author }}
             </a>
             <p class="text-sm font-medium text-slate-600">|</p>
-            <h4 class="text-sm font-medium text-slate-600">12 January 2025</h4>
+            <h4 class="text-sm font-medium text-slate-600">{{ $post->created_at->diffForHumans() }}</h4>
         </div>
         <p class="text-sm font-light text-slate-600 text-justify my-3">
             {{ $post->body }}
