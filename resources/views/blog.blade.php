@@ -1,6 +1,7 @@
 <x-layout>
     <x-slot:title>Blog</x-slot:title>
 
+
     @foreach ($posts as $post)
         <article class="max-w-screen-md border-b border-slate-300 my-2">
             <h3 class="text-xl font-bold mb-1">{{ $post['title'] }}</h3>
@@ -9,7 +10,7 @@
                     {{ $post['author'] }}
                 </a>
                 <p class="text-sm font-medium text-slate-600">|</p>
-                <h4 class="text-sm font-medium text-slate-600">12 January 2025</h4>
+                <h4 class="text-sm font-medium text-slate-600">{{ $post->created_at->diffForHumans() }}</h4>
             </div>
             <p class="text-sm font-light text-slate-600 text-justify my-3">
                 {{ Str::limit($post['body'], 150) }}
