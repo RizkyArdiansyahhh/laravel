@@ -1,5 +1,6 @@
 <x-layout>
     <x-slot:title>Blog</x-slot:title>
+    <x-slot:header>{{ $title }}</x-slot:header>
 
 
     <article class="max-w-screen-md border-b border-slate-300 my-2">

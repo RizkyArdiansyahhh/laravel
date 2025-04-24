@@ -1,13 +1,19 @@
 <x-layout>
     <x-slot:title>Blog</x-slot:title>
+    <x-slot:header>{{ $title }}</x-slot:header>
 
 
     @foreach ($posts as $post)
         <article class="max-w-screen-md border-b border-slate-300 my-2">
             <h3 class="text-xl font-bold mb-1">{{ $post['title'] }}</h3>
-            <div class="flex gap-2">
-                <a href="/author/{{ $post->author->id }}" class="text-sm font-medium text-slate-600 hover:underline">
+            <div class="flex gap-2 text-sm  font-medium">
+                by
+                <a href="/author/{{ $post->author->username }}" class="hover:underline text-slate-600">
                     {{ $post->author->name }}
+                </a>
+                in
+                <a href="/categorie/{{ $post->categorie->slug }}" class="hover:underline text-slate-600">
+                    {{ $post->categorie->name }}
                 </a>
                 <p class="text-sm font-medium text-slate-600">|</p>
                 <h4 class="text-sm font-medium text-slate-600">{{ $post->created_at->diffForHumans() }}</h4>
