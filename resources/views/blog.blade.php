@@ -6,8 +6,8 @@
         <article class="max-w-screen-md border-b border-slate-300 my-2">
             <h3 class="text-xl font-bold mb-1">{{ $post['title'] }}</h3>
             <div class="flex gap-2">
-                <a href="#" class="text-sm font-medium text-slate-600">
-                    {{ $post['author'] }}
+                <a href="/author/{{ $post->author->id }}" class="text-sm font-medium text-slate-600 hover:underline">
+                    {{ $post->author->name }}
                 </a>
                 <p class="text-sm font-medium text-slate-600">|</p>
                 <h4 class="text-sm font-medium text-slate-600">{{ $post->created_at->diffForHumans() }}</h4>
