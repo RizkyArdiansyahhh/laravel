@@ -13,6 +13,6 @@ class Categorie extends Model
     protected $fillable = ['name', 'slug'];
 
     public function posts():HasMany {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Post::class)->chaperone();
     }
 }
