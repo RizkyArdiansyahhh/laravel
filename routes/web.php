@@ -24,12 +24,12 @@ Route::get('/blog/{post:slug}', function(Post $post){
     return view('post', ['title'=> 'Article '. $post->title, 'post' => $post]);
 });
 
-Route::get('author/{user:username}', function(User $user){
+Route::get('/author/{user:username}', function(User $user){
     // $posts = $user->posts->load('author', 'categorie');
 
     return view('blog', ['title' => count($user->posts) . ' Article by ' . $user->name ,'posts' => $user->posts]);
 });
-Route::get('categorie/{categorie:slug}', function(Categorie $categorie){
+Route::get('/categorie/{categorie:slug}', function(Categorie $categorie){
     // $posts = $categorie->posts->load('author', 'categorie');
     return view('blog', ['title' => 'Article in '. $categorie->name ,'posts' => $categorie->posts]);
 });

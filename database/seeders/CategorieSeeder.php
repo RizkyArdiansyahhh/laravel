@@ -16,19 +16,23 @@ class CategorieSeeder extends Seeder
         //
         Categorie::create([
             'name' => 'Teknologi',
-            'slug' => 'teknologi'
+            'slug' => 'teknologi',
+            'color' => 'red'
         ]);
         Categorie::create([
             'name' => 'Olahraga & Kesehatan',
-            'slug' => 'olahraga-kesehatan'
+            'slug' => 'olahraga-kesehatan',
+            'color' => 'yellow'
         ]);
         Categorie::create([
             'name' => 'Tips & Trik',
-            'slug' => 'tips-trik'
+            'slug' => 'tips-trik',
+            'color' => 'cyan'
         ]);
         Categorie::create([
-            'name' => 'Mechin Learning',
-            'slug' => 'mechin-learning'
+            'name' => 'Mechine Learning',
+            'slug' => 'mechine-learning',
+            'color' => 'blue'
         ]);
     }
 }
